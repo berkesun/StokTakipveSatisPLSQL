@@ -1,0 +1,57 @@
+{
+	"folders": {},
+	"connections": {
+		"oracle_thin-17e2776e0ce-4ba9ac680e5e87f0": {
+			"provider": "oracle",
+			"driver": "oracle_thin",
+			"name": "XEPDB1",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "1521",
+				"database": "XEPDB1",
+				"url": "jdbc:oracle:thin:@//localhost:1521/XEPDB1",
+				"home": "C:\\app\\SLM\\product\\21c\\dbhomeXE",
+				"type": "dev",
+				"provider-properties": {
+					"show-only-one-schema@": "false",
+					"@dbeaver-check-schema-content@": "false",
+					"@dbeaver-always-show-dba@": "false",
+					"@dbeaver-always-use-dba-views@": "false",
+					"@dbeaver-meta-use-sys-schema@": "false",
+					"@dbeaver-meta-use-simple-constraints@": "false",
+					"@dbeaver-use-rule-hint@": "false",
+					"@dbeaver-use-meta-optimizer@": "false",
+					"@dbeaver-meta-use-alternative-table-query@": "false",
+					"oracle.meta-search-in-synonyms": "false",
+					"@dbeaver-connection-type@": "BASIC",
+					"@dbeaver-sid-service@": "SERVICE"
+				},
+				"auth-model": "oracle_native"
+			}
+		}
+	},
+	"virtual-models": {
+		"oracle_thin-17e2776e0ce-4ba9ac680e5e87f0": {
+			"USER1": {
+				"@properties": {
+					"erd.diagram.state": {
+						"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202201100544\"><entities><data-source id=\"oracle_thin-17e2776e0ce-4ba9ac680e5e87f0\"><entity id=\"1\" name=\"KATEGORI\" fq-name=\"USER1.KATEGORI\" order=\"0\" x=\"596\" y=\"112\"><path name=\"USER1\"/></entity><entity id=\"2\" name=\"MUSTERI\" fq-name=\"USER1.MUSTERI\" order=\"1\" x=\"162\" y=\"113\"><path name=\"USER1\"/></entity><entity id=\"3\" name=\"PERSONEL\" fq-name=\"USER1.PERSONEL\" order=\"2\" x=\"446\" y=\"268\"><path name=\"USER1\"/></entity><entity id=\"4\" name=\"SATIS\" fq-name=\"USER1.SATIS\" order=\"3\" x=\"291\" y=\"97\"><path name=\"USER1\"/></entity><entity id=\"5\" name=\"STOK\" fq-name=\"USER1.STOK\" order=\"4\" x=\"590\" y=\"243\"><path name=\"USER1\"/></entity><entity id=\"6\" name=\"URUNLER\" fq-name=\"USER1.URUNLER\" order=\"5\" x=\"443\" y=\"96\"><path name=\"USER1\"/></entity><entity id=\"7\" name=\"YETKILER\" fq-name=\"USER1.YETKILER\" order=\"6\" x=\"170\" y=\"286\"><path name=\"USER1\"/></entity><entity id=\"8\" name=\"YONETICI\" fq-name=\"USER1.YONETICI\" order=\"7\" x=\"293\" y=\"270\"><path name=\"USER1\"/></entity></data-source></entities><relations><relation name=\"FK_KATEGORI_URUNLER\" fq-name=\"USER1.URUNLER.FK_KATEGORI_URUNLER\" type=\"fk\" pk-ref=\"1\" fk-ref=\"6\"/><relation name=\"FK_MUSTERI_SATIS\" fq-name=\"USER1.SATIS.FK_MUSTERI_SATIS\" type=\"fk\" pk-ref=\"2\" fk-ref=\"4\"/><relation name=\"FK_PERSONEL_SATIS\" fq-name=\"USER1.SATIS.FK_PERSONEL_SATIS\" type=\"fk\" pk-ref=\"3\" fk-ref=\"4\"/><relation name=\"FK_PERSONEL_STOK\" fq-name=\"USER1.STOK.FK_PERSONEL_STOK\" type=\"fk\" pk-ref=\"3\" fk-ref=\"5\"/><relation name=\"FK_PERSONEL_YONETICI\" fq-name=\"USER1.YONETICI.FK_PERSONEL_YONETICI\" type=\"fk\" pk-ref=\"3\" fk-ref=\"8\"/><relation name=\"FK_URUN_SATIS\" fq-name=\"USER1.SATIS.FK_URUN_SATIS\" type=\"fk\" pk-ref=\"6\" fk-ref=\"4\"/><relation name=\"FK_URUN_STOK\" fq-name=\"USER1.STOK.FK_URUN_STOK\" type=\"fk\" pk-ref=\"6\" fk-ref=\"5\"/><relation name=\"FK_YETKI_YONETICI\" fq-name=\"USER1.YONETICI.FK_YETKI_YONETICI\" type=\"fk\" pk-ref=\"7\" fk-ref=\"8\"/></relations></diagram>"
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
